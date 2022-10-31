@@ -1,16 +1,18 @@
 import React from 'react';
+import Counter from '../components/ImagesFetch/Counter';
 import "../style/Home.scss"
 
 function Home() {
+
     return (
          <section class="main">
         <div class="main_title">
             <h1>Generic Hipster Coffee</h1>
             <h2>Specialty coffee, fresh food & local community.</h2>
         </div>
-        <div class="main_img">
-            <img src="/img/counter.jpg" alt="counter" />
-        </div>
+        <div class='main_img'>
+       <Counter img = 'counter'/>
+       </div>
         <div class="main_info">
             <div class="main_info_hours">
                 <h3>Opening hours</h3>

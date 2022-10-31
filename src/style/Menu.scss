@@ -141,13 +141,7 @@ main {
   }
 }
 
-.espresso1,
-.espresso2,
-.espresso3,
-.espresso4,
-.espresso5,
-.espresso6,
-.espresso7 {
+.espresso__item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -164,10 +158,7 @@ main {
   }
 }
 
-.filters1,
-.filters2,
-.filters3,
-.filters4 {
+.filters__item {
   display: flex;
   flex-direction: row;
   justify-content: space-between;

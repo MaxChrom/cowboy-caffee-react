@@ -1,0 +1,118 @@
+.mains {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  width: 80%;
+  height: 50%;
+  h2 {
+    margin: 0;
+    padding: 0;
+  }
+  &__products {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    & img {
+      margin-bottom: -0.23rem;
+    }
+    &--disription {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem;
+      padding: 20px;
+      letter-spacing: 2px;
+      justify-content: space-between;
+    }
+
+    &--total {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 20px;
+    }
+  }
+}
+
+$border: 0 solid #dbdbdb;
+$border-radius: 3px;
+$color--primary: #f3f3f3;
+$modifier--text-color: #888;
+
+.quantity-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:focus {
+    background: red;
+  }
+}
+
+.quantity-input__modifier,
+.quantity-input__screen {
+  user-select: none;
+  outline: none;
+}
+
+.quantity-input__modifier {
+  padding: 0.5rem;
+  width: 2.5rem;
+  font-size: 1.5rem;
+  margin: 5px;
+
+  background: $color--primary;
+  color: $modifier--text-color;
+  border: $border;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(#fff, 0.6);
+
+  cursor: pointer;
+
+  &:hover {
+    background: darken($color--primary, 10%);
+    color: darken($modifier--text-color, 20%);
+  }
+
+  &--left {
+    border-radius: $border-radius 0 0 $border-radius;
+  }
+
+  &--right {
+    border-radius: 0 $border-radius $border-radius 0;
+  }
+}
+
+.quantity-input__screen {
+  width: 4rem;
+  padding: 0.7rem;
+  font-size: 1.5rem;
+
+  border: 0;
+  border-top: $border;
+  border-bottom: $border;
+  text-align: center;
+}
+
+.quantity-container {
+  width: 170px;
+  height: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+}
+.container {
+  & p {
+    height: 2rem;
+    margin: 1rem;
+  }
+}
