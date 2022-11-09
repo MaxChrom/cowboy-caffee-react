@@ -6,15 +6,21 @@ const Buy = (props) => {
   const [buttonText, setButtonText] = useState("Add to cart")
   const [isActive, setIsActive] = useState(false)
   const { value, setValue } = useContext(UserContext)
+
   const addToCart = () => {
-    setValue([[`${props.name}`], [`${props.img}`], [`${props.discription}`]])
+    setValue([
+      ...value,
+      [[`${props.name}`], [`${props.img}`], [`${props.discription}`]],
+    ])
     setIsActive((current) => !current)
+
     setButtonText("Remove from cart")
     if (isActive) {
-      setValue([])
+      // setValue([])
       setButtonText("Add to cart")
     }
   }
+
   /// INSTEAD OF BOOL SHOULD BE A STRING!!!
   // useEffect(() => {
   //   const raw = localStorage.getItem("isActive", JSON.parse(isActive)) || []
@@ -42,9 +48,7 @@ const Buy = (props) => {
           fontSize: isActive ? "0.8rem" : "1rem",
           color: isActive ? "lightgray" : "white",
         }}
-        onClick={() => {
-          addToCart()
-        }}
+        onClick={addToCart}
       >
         {buttonText}
       </button>

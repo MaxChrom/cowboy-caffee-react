@@ -13,7 +13,8 @@ import { UserContext } from "./UserContext"
 import { useState } from "react"
 
 export default function App() {
-  const [value, setValue] = useState(false)
+  const [value, setValue] = useState([])
+  console.log(value)
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ value, setValue }}>
