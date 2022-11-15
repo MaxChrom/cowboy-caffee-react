@@ -9,12 +9,12 @@ import Coffee from "./Pages/Coffee"
 import Menu from "./Pages/Menu"
 import Story from "./Pages/Story"
 import Cart from "./Pages/Cart"
+import Checkout from "./Pages/Checkout"
 import { UserContext } from "./UserContext"
 import { useState } from "react"
 
 export default function App() {
   const [value, setValue] = useState([])
-  console.log(value)
   return (
     <BrowserRouter>
       <UserContext.Provider value={{ value, setValue }}>
@@ -26,6 +26,7 @@ export default function App() {
             <Route path='Story' element={<Story />} />
             <Route path='Coffee' element={<Coffee />} />
             <Route path='Cart' element={<Cart />} />
+            <Route path='Checkout' element={<Checkout />} />
           </Route>
         </Routes>
       </UserContext.Provider>

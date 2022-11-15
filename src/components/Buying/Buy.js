@@ -1,22 +1,36 @@
 import { useState, useEffect } from "react"
 import { useContext } from "react"
 import { UserContext } from "../../UserContext"
+import Quantity from "./Quantity"
+import { useReducer, reducer } from "react"
 
 const Buy = (props) => {
   const [buttonText, setButtonText] = useState("Add to cart")
   const [isActive, setIsActive] = useState(false)
   const { value, setValue } = useContext(UserContext)
+  const [totalPrice, setTotalPrice] = useState(Number(props.price))
 
+  const callback = (totalPrice) => {
+    setTotalPrice(totalPrice)
+    console.log(totalPrice)
+  }
   const addToCart = () => {
     setValue([
       ...value,
-      [[`${props.name}`], [`${props.img}`], [`${props.discription}`]],
+      [
+        `${props.name}`,
+        `${props.img}`,
+        `${props.discription}`,
+        `${props.price}`,
+        `${totalPrice}`,
+      ],
     ])
+    console.log(value)
     setIsActive((current) => !current)
 
     setButtonText("Remove from cart")
     if (isActive) {
-      // setValue([])
+      setValue([])
       setButtonText("Add to cart")
     }
   }
@@ -42,13 +56,17 @@ const Buy = (props) => {
 
   return (
     <div>
+      <Quantity price={props.price} parentCallback={callback} />
       <button
         class='buy'
         style={{
           fontSize: isActive ? "0.8rem" : "1rem",
           color: isActive ? "lightgray" : "white",
         }}
-        onClick={addToCart}
+        // onClick={addToCart}
+        onClick={() => {
+          addToCart()
+        }}
       >
         {buttonText}
       </button>

@@ -10,15 +10,15 @@ const ProductToCart = (props) => {
           name={props.name}
           img={props.img}
           discription={props.discription}
+          price={props.price}
+          totalPrice={props.totalPrice}
         />
 
         <div className='mains__products--total'>
           <div className='mains__products--total--quantity'>
-            <Quantity />
+            {/* <Quantity price ={props.price}/> */}
           </div>
-          <div className='mains__products--total--price'>
-            <button class='buy'>Process payment</button>
-          </div>
+          <div className='mains__products--total--price'></div>
         </div>
       </div>
     </div>

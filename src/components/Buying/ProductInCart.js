@@ -10,6 +10,9 @@ const ProductInCart = (props) => {
         <h2>{props.name}</h2>
         <p>{props.discription}</p>
       </div>
+      <div className='mains__products--total'>
+        <p>In cart: {props.totalPrice / props.price} </p>
+      </div>
     </>
   )
 }

@@ -6,6 +6,7 @@ const Product = (props) => {
       img={props.img}
       flavor={props.flavor}
       discription={props.discription}
+      price={props.price}
     />
   )
 }
