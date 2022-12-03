@@ -11,50 +11,6 @@ a {
   color: rgb(148, 149, 150);
 }
 
-.header {
-  background-color: rgb(246, 247, 249);
-  font-family: $main-font;
-  font-weight: 300;
-  display: flex;
-  flex-direction: row;
-  color: white;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 100%;
-  height: 10rem;
-  padding-left: 10%;
-  padding-right: 10%;
-  @media (max-width: 720px) {
-    flex-direction: column;
-    height: 100%;
-  }
-  &_logo {
-    & img {
-      height: 9rem;
-    }
-  }
-  &_menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    @media (max-width: 720px) {
-      justify-content: center;
-    }
-    @media (max-width: 415px) {
-      justify-content: center;
-      font-size: 0.8em;
-    }
-    width: 100%;
-    height: 65px;
-    &-text {
-      margin: 20px;
-      &_selected a {
-        color: rgb(56, 56, 56);
-      }
-    }
-  }
-}
-
 ///our story page content ///
 .story {
   display: flex;
@@ -143,58 +99,6 @@ input[type="submit"]:hover {
   margin-bottom: -5%;
 }
 
-.footer {
-  background-color: $color-dark;
-  display: flex;
-  flex-direction: column;
-  color: $color-light;
-  justify-content: space-between;
-  align-items: center;
-  align-self: flex-end;
-  max-width: 100%;
-  height: 10rem;
-  padding: 5% 30%;
-  font-family: $main-font;
-  font-weight: 100;
-  @media (max-width: 720px) {
-    padding: 5%;
-  }
-
-  &__menu {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    text-align: center;
-    width: 100%;
-    height: 65px;
-
-    &__text {
-      margin: 20px;
-      @media (max-width: 415px) {
-        justify-content: center;
-        font-size: 0.5em;
-      }
-
-      &--selected a {
-        color: $color-light;
-      }
-    }
-  }
-
-  &__social {
-    text-align: center;
-    &__hashtag {
-      padding: 1rem;
-    }
-  }
-  @media (max-width: 720px) {
-    flex-direction: column;
-    height: 100%;
-  }
-  @media (max-width: 720px) {
-    justify-content: center;
-  }
-}
 
 .formSubmitted {
   font-weight: 100;
